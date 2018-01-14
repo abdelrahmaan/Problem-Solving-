@@ -1,0 +1,21 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+vector<char>v;
+int n , m ,x , A[106];
+set<int>st;
+int main(){
+    scanf("%d%d" , &n , &m);
+    while(n--){
+      scanf("%d" , &x);
+        for(int i = 0; i< x; ++i){
+         scanf("%d" , &A[i]);
+          st.insert(A[i]);
+            }
+    }
+    if(st.size() == m )
+        puts("YES");
+    else
+        puts("NO");
+            return 0;
+}

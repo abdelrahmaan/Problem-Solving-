@@ -1,0 +1,31 @@
+/*
+
+sereja take first and dimaa , that's take maximaum num in each careds from left or right  
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int n ,A[1006] , r , l  , k ,  maxii ,  s ,d;
+int main ()
+{
+    scanf("%d" , &n);
+    l = n-1;
+    for(int i = 0; i< n; ++i)
+        scanf("%d" , &A[i]);
+        while(r <= l ){
+                if(A[r] >= A[l]){
+                maxii = A[r];
+                r++;
+                }else{
+                maxii= A[l];
+                l--;
+                }
+          if(k % 2 == 0)
+                s += maxii;
+                else
+                d += maxii;
+            k++;
+                }
+            printf("%d %d\n" , s ,d);
+            return 0;
+}

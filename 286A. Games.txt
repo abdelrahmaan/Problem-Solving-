@@ -1,0 +1,20 @@
+/*
+count += compare each line with others of cross places
+
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int  A[36] , B[36] , ans  , n ;
+int main ()
+{
+    scanf("%d" , &n);
+    for(int i = 0; i < n; ++i)
+        scanf("%d%d" , &A[i], &B[i]);
+            for(int i = 0; i < n; ++i)
+                    for(int j = 0; j < n; ++j)
+                    if(A[i] == B[j])
+                        ans++;
+            printf("%d\n" , ans);
+            return 0;
+}

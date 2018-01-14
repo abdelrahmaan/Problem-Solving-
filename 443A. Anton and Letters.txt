@@ -1,0 +1,32 @@
+/*
+count the unique characther
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+string s;
+set<char>st;
+int main(){
+    getline(cin , s);
+    for(int i= 0; i<s.length(); ++i)
+      if(s[i] >= 'a' && s[i] <= 'z')
+    //if(s[i]>= 97 && s[i] <= 122)
+        st.insert(s[i]);
+        printf("%d\n" , st.size());
+            return 0;
+}
+
+_________________________________Another Solution__________________________
+#include <bits/stdc++.h>
+using namespace std;
+char ch[1006];
+set<char>st;
+int main(){
+    cin.getline( ch , 1006);
+    //cin >> ch;
+    for(int i= 0; i < strlen(ch); ++i)
+    if(ch[i]>= 'a' && ch[i] <= 'z')
+        st.insert(ch[i]);
+        printf("%d\n" , st.size());
+            return 0;
+}

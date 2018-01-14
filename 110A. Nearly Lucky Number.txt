@@ -1,0 +1,9 @@
+#include <bits/stdc++.h>
+using namespace std;
+string s , sNew;
+int main() {
+    cin >> s;
+    if(count(s.begin()  , s.end() , '4') + count(s.begin()  , s.end() , '7') == 4 || count(s.begin()  , s.end() , '4') + count(s.begin()  , s.end() , '7') == 7 )        puts("YES");
+        else puts("NO");
+    return 0;
+}

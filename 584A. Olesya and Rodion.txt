@@ -1,0 +1,38 @@
+/*
+the solution of this problem in constrain =D ...
+ at first knowing when print '-1'... and the other things it's easy ,,
+#1:  t == 10 
+     A: n == 1  ... print '-1'
+     B: n >1    ... 
+#2:  t >10 ....
+*/
+___________________________________________________
+#include <bits/stdc++.h>
+using namespace std;
+int  n , t ;
+string num;
+char ch;
+int main(){
+    scanf("%d%d"  ,&n , &t);
+    ch = t + '0';
+    if(t == 10 ){
+         if( n == 1){
+            printf("-1\n");
+            return 0;
+        }else{
+            while(1){
+            num += '1';
+            n--;
+            if(n == 1) break;
+                    } num += '0';
+        }
+    }else{
+        while(1){
+            num += ch;
+            n--;
+            if(n == 0) break;
+        }
+    }
+    cout << num << endl;
+   return 0;
+}

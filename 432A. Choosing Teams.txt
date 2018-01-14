@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+const int N = 1e2+9 , OO = 1000000009;
+int n , k  , sharing , participating  ;
+int main() {
+    scanf("%d%d" ,&n , &k );
+    for(int i =0; i < n; ++i){
+        scanf("%d" , &sharing);
+        if(5 - sharing >= k ) participating ++;
+    }
+    printf("%d\n" , participating / 3 );
+        return 0;
+}

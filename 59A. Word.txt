@@ -1,0 +1,46 @@
+/*
+
+check string and if charcter of upper case > s1.size()/2 ... change the string into upper cases
+else  change the string into lower cases
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+string s1  ;
+int upper , len;
+int main ()
+{
+    cin >> s1;
+    len = s1.size()/2;
+    for(int i = 0; i<s1.length(); ++i)
+        if(s1[i] >=65 && s1[i] <=90 )
+            upper++;
+            for(int i = 0; i<s1.length(); ++i)
+                if(upper > len)
+                s1[i] = toupper(s1[i]);
+                    else
+                    s1[i] = tolower(s1[i]);
+        cout<<s1<<endl;
+            return 0;
+}
+
+______________________________Anothr Solution______________________________________________
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int len = 0 , capital = 0 , small = 0;
+    string s1;
+    cin>>s1;
+        for(int i =0; i< s1.length(); ++i)
+            if(isupper(s1[i]))
+                capital++;
+            else
+                small++;
+            for(int i =0; i< s1.length(); ++i)
+                if(capital > small)
+                s1[i] = toupper(s1[i]);
+                else
+                    s1[i] = tolower(s1[i]);
+                   cout<<s1<<endl;
+return 0;
+}

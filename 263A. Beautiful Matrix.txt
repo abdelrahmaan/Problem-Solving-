@@ -1,0 +1,77 @@
+/*
+How many numbers of swaps to be  Beautiful Matrix
+like ... num 1 in the center 
+0 0 0 0 0
+0 0 0 0 0
+0 0 1 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int A[5][5] , swaps , row ,col;
+int main ()
+{
+    for(int i = 0; i < 5; ++i)
+        for(int j = 0; j < 5; ++j)
+            scanf("%d" , &A[i][j]);
+    for(int i = 0; i < 5; ++i)
+        for(int j = 0; j < 5; ++j)
+         if(A[i][j] == 1){
+            row = i;
+            col = j;
+         }
+         if(row > 2  )
+            swaps += row-2;
+            else
+                swaps += 2-row;
+             if( col > 2)
+            swaps += col-2;
+            else
+                swaps += 2-col;
+    printf("%d\n" , swaps);
+            return 0;
+}
+______________________________________Another Solution________________________
+#include<bits/stdc++.h>
+using namespace std;
+int a, b ,c ,d, e , swaps , row ,col;
+int main ()
+{
+    for(int i =0; i <5; ++i){
+        cin>>a>>b>>c>>d>>e;
+        if(a == 1){
+            row =i;
+            col = 0;
+            }
+            else if(b ==1){
+            row =i;
+            col = 1;
+            }
+            else if(c ==1){
+            row =i;
+            col = 2;
+            }
+            else if(d ==1){
+            row =i;
+            col = 3;
+            }
+            else if(e ==1){
+            row =i;
+            col = 4;
+            }
+    }
+
+         if(row > 2  )
+            swaps += row-2;
+            else
+                swaps += 2-row;
+             if( col > 2)
+            swaps += col-2;
+            else
+                swaps += 2-col;
+    printf("%d\n" , swaps);
+            return 0;
+}

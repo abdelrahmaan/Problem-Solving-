@@ -1,0 +1,25 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+const int N = 1e2+9 , OO = 1000000009;
+int a , b , c ;
+int main() {
+    scanf("%d%d%d" ,&a , &b , &c);
+    printf("%d\n" , max((a+b)*c , max((b+c)*a, max(a*b*c , a+b+c ))));
+        return 0;
+}
+_____________________________________________
+#include <bits/stdc++.h>
+using namespace std;
+const int N = 1e2+9 , OO = 1000000009;
+int a , b , c , x , y , z , k , m;
+int main() {
+    scanf("%d%d%d" ,&a , &b , &c);
+    x = (a+b)*c;
+    z = (b+c)*a;
+    k = a*b*c;
+    m = a+b+c;
+    printf("%d\n" , max(x , max(z, max(k , m ))));
+        return 0;
+}
+-------------------------------------------------

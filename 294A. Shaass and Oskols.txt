@@ -1,0 +1,27 @@
+/*
+
+https://www.youtube.com/watch?v=GOuclkVCvRI
+
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+int boxs , Boxs[106] , shoot , nBoxs , nBird;
+int main(){
+    scanf("%d" , &boxs);
+    for(int i = 0; i < boxs; ++i)
+    scanf("%d" , &Boxs[i]);
+        scanf("%d" , &shoot);
+            for(int i = 0; i< shoot; ++i){
+                scanf("%d%d" , &nBoxs , &nBird);
+                nBoxs--;
+        if (nBoxs != boxs-1)
+            Boxs[nBoxs+1] += Boxs[nBoxs] - nBird;
+            if( nBoxs != 0 )
+            Boxs[nBoxs - 1] += nBird - 1;
+            Boxs[nBoxs] = 0;
+            }
+        for(int i=0; i<boxs; ++i)
+            printf("%d\n" , Boxs[i]);
+            return 0;
+}

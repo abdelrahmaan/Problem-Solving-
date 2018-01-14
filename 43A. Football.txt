@@ -1,0 +1,46 @@
+#include <bits/stdc++.h>
+using namespace std;
+int n , c1 = 1 , c2;
+string s[106] ,sC1 , sC2;
+int main(){
+    scanf("%d" , &n);
+    for(int i = 0; i< n; ++i){
+    cin >> s[i];
+    sC1 = s[0];
+    if(s[i] != sC1)
+        sC2 = s[i];
+        if(s[i] == sC1)
+            c1++;
+        else
+            c2++;
+    }
+            if(c1 > c2 ) cout << sC1 <<endl;
+            else   cout << sC2 <<endl;
+   return 0;
+}
+
+
+______________________________________________________
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s[106] , s1 , s2;
+    int n =0 , ans1=0 , ans2=0;
+    scanf("%d" , &n);
+    for(int i = 0; i<n; ++i)
+        cin>>s[i];
+         s1 = s[0];
+        for(int i = 0; i<n; ++i)
+        if(s[i] == s1){
+            ans1++;
+        }else{
+        s2 = s[i];
+        ans2++;
+        }
+        if(ans1 >= ans2)
+            cout<<s1<<endl;
+            else
+                cout<<s2<<endl;
+    return 0;
+}

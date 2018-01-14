@@ -1,0 +1,39 @@
+/*
+
+you should to know total time of two ovens
+and compare of it 
+
+*/
+#include <bits/stdc++.h>
+using namespace std;
+int n , t , k , d , totalTimeCakeOven1 , timeOven1 , timeOven2;
+int main(){
+    scanf("%d%d%d%d" , &n , &t ,&k , &d);
+    timeOven2 = t + d;
+    if(n % k != 0)
+        totalTimeCakeOven1 = (n / k ) + 1;
+    else
+        totalTimeCakeOven1 = (n / k);
+     timeOven1 = (t * totalTimeCakeOven1 );
+    if(timeOven2 < timeOven1)
+        puts("YES");
+    else
+        puts("NO");
+            return 0;
+}
+
+______________________________Another Solution_____________________________
+#include <bits/stdc++.h>
+using namespace std;
+int n , t , k , d , totalTimeCakeOven1 , timeOven1 , timeOven2;
+int main(){
+    scanf("%d%d%d%d" , &n , &t ,&k , &d);
+    timeOven2 = t + d;
+    totalTimeCakeOven1 = (n +  k-1 )/ k ;
+     timeOven1 = (t * totalTimeCakeOven1 );
+    if(timeOven2 < timeOven1)
+        puts("YES");
+    else
+        puts("NO");
+            return 0;
+}

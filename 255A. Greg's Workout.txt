@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+int n , x , i , chest , biceps , backk , maxii ;
+int main(){
+        scanf("%d" , &n);
+        while(n--){
+                i++;
+            scanf("%d" , &x);
+                if(i == 1)
+                chest +=x;
+            else if (i == 2 )
+                biceps +=x;
+            else if (i == 3 ){
+                backk +=x;
+                i = 0;
+            }
+        }
+        maxii =  max(chest , max(biceps , backk));
+        if(maxii == chest) printf("chest\n");
+        if(maxii == biceps) printf("biceps\n");
+        if(maxii == backk) printf("back\n");
+return 0;
+}

@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+  using namespace std;
+        int n , k , cont , counter , A[109];
+  int main()
+  {
+      scanf("%d%d" , &n , &k);
+      for(int i = 0; i< n; ++i)
+        scanf("%d" , &A[i]);
+      cont = A[k-1];
+      for(int i = 0; i< n; ++i)
+        if(A[i] >= cont && A[i] > 0)
+        counter++;
+      printf("%d\n" , counter);
+
+      return 0;
+  }

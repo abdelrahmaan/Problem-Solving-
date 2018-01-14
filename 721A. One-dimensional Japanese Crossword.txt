@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+int n , g ,  j , counter ,k;
+string s1;
+vector<int>v;
+int main(){
+    scanf("%d" , &n);
+    cin >> s1;
+    for( int i = 0; i <= s1.size(); ++i){
+        if(s1[i] == 'B'){
+                g++;
+                j = i;
+        while(s1[j] == 'B'){
+        counter ++;
+        j++;
+        }
+        v.push_back(counter);
+        i +=counter;
+        counter =0;
+        }
+    }
+    if(g == 0){
+    printf("0\n");
+    return 0;
+    }else{
+    printf("%d\n" , g);
+    for(int i = 0; i < v.size(); ++i)
+        printf("%d " , v[i]);
+        printf("\n");
+        return 0;
+    }
+}

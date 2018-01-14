@@ -1,0 +1,22 @@
+/*
+
+take the unique number without '+' 
+and sort it's and print it's between two num '+'
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+   string s1 , s2 , s3 ,s4;
+   cin>>s1;
+   for(int i =0; i<s1.length(); ++i)
+    if(s1[i] != '+')
+    s2 +=s1[i];
+   sort(s2.begin() , s2.end());
+   int len = s2.length();
+        cout << s2[0];
+        for(int i = 1; i < len; ++i)
+            cout << '+' << s2[i];
+        cout << '\n';
+        return 0;
+      }

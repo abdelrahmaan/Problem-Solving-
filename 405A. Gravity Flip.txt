@@ -1,0 +1,19 @@
+/*
+
+what happen when flip the box ... all we need to sort the numbers 
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int n , A[106];
+int main ()
+{
+    scanf("%d" , &n);
+    for(int i = 0; i<n; ++i)
+        scanf("%d" , &A[i]);
+        sort(A , A+n);
+         for(int i = 0; i<n; ++i)
+            printf("%d " , A[i]);
+            return 0;
+}
+

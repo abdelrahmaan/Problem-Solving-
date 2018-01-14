@@ -1,0 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+long long n , m , a , f1 , f2;
+int main(){
+  scanf("%lld%lld%lld" , &n , &m , &a);
+         f1 = (n + a - 1) / a;
+         f2 = (m + a - 1) / a;
+         printf("%lld\n" , f1 * f2);
+            return 0;
+}

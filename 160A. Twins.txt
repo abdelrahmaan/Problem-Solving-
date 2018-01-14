@@ -1,0 +1,27 @@
+/*
+
+sum all element of Array and make var the contain maximum num
+and it's > sum of all element 
+/*
+
+#include <bits/stdc++.h>
+using namespace std;
+bool sortRev(int a , int b){
+return a > b;
+}
+int n  , A[106] , sumTwins  , sumIndevidual,  ans;
+int main(){
+    scanf("%d" , &n);
+    for(int i = 0; i < n; i++){
+        scanf("%d" , &A[i]);
+        sumTwins += A[i];
+    }
+        sort(A , A+n , sortRev);
+        for(int i = 0; i < n; i++)
+        if(sumIndevidual <= sumTwins / 2){
+            sumIndevidual += A[i];
+            ans++;
+        }
+        printf("%d\n" , ans);
+    return 0;
+}

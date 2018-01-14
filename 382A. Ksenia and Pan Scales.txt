@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+int sizeLeft , sizeRight , sizeTask ,  cross;
+int main(){
+    string scale, task, left, right;
+    cin >> scale  >> task;
+     cross = scale.find('|');
+    left  = scale.substr(0, cross);
+    right = scale.substr(cross + 1);
+
+        for(int i =0; i < task.size(); ++i)
+            if (left.size() <= right.size()) left += task[i];
+            else right += task[i];
+         cout << (left.size() == right.size() ? left + "|" + right : "Impossible") << endl;
+            return 0;
+        }
+
+

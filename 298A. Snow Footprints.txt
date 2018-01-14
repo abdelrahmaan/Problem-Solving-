@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+string s;
+int n , R, L , first = 1 , endd = 1;
+int main(){
+    scanf("%d", &n);
+     cin >> s;
+     for(int i = 0; i < s.length(); i++){
+        if(s[i] == 'R') R++;
+        else if(s[i] == 'L') L++;
+     }
+     if(L == 0){
+        first += s.find_first_of('R');
+        endd += s.find_last_of('R') + 1;
+     }
+     else if(R == 0){
+        endd += s.find_first_of('L') - 1;
+        first += s.find_last_of('L');
+     }
+     else if(L >= 1 && R >= 1){
+        first += s.find_first_of('R');
+        endd += s.find_last_of('R');
+     }
+     printf("%d %d\n" , first , endd);
+        return 0;
+}

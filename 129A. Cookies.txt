@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+int n , a , even , odd;
+int main(){
+    scanf("%d" , &n);
+    for(int i =0; i < n; ++i){
+        scanf("%d" , &a);
+        if (a % 2 == 0) even ++;
+        else odd += 1;
+    }
+    cout << (odd % 2 == 1 ? odd : even) << endl;
+    return 0;
+}

@@ -1,0 +1,17 @@
+/*
+
+if the first character not upper case change into upper
+
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+string s1;
+int main ()
+{
+    cin >> s1;
+    if(!isupper(s1[0]))
+            s1[0] = toupper(s1[0]);
+        cout<<s1<<endl;
+            return 0;
+}

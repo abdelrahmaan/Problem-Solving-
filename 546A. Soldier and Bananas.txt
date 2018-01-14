@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+int k , n ,  w , money , borrow;
+int main(){
+    scanf("%d%d%d" , &k ,&n , &w);
+    for( int i = 1; i <= w; ++i)
+        money += k * i;
+        borrow = money - n;
+        if(borrow < 0 ) borrow = 0;
+        printf("%d\n" , borrow );
+        return 0;
+}

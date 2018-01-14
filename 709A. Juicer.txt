@@ -1,0 +1,35 @@
+/*
+
+chck the size of orange > b continue to another orange 
+else
+juser += size of orange and if juer > d ans++
+
+5 5 5
+5 5 5 5 5 
+ans = 2
+
+5 > 5 no, 5+5=10 > 5  ,ans=1 , ju =0
+5 > 5 no, 5+5=10 > 5  , ans 2 , ju =0
+5 > 5 no
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+int n , b ,d , juser , ans , A[1000006];
+int main(){
+    scanf("%d%d%d" , &n , &b ,&d);
+    for(int i = 0; i < n; ++i)
+    scanf("%d" , &A[i]);
+            for(int i = 0; i< n; ++i)
+            if(A[i] > b)
+                continue;
+            else
+            juser +=A[i];
+            if(juser > d){
+                ans++;
+                juser = 0;
+            }
+            printf("%d\n" , ans);
+
+            return 0;
+}

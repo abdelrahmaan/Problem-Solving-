@@ -1,0 +1,21 @@
+/*
+
+Make a variable that holds the position of
+first string and make compare between two strings
+and if s1[i] == s2[j] counter ++
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+string s, t;
+int i , j , counter = 1;
+int main(){
+ cin>>s>>t;
+ for (i=0;i <t.length ();i++)
+  if (t[i] == s [j]){
+    counter++;
+    j++;
+  }
+ printf("%d\n" , counter);
+    return 0;
+}

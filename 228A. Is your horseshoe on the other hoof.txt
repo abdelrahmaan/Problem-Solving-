@@ -1,0 +1,52 @@
+/*
+
+ you should count different numbers from input and
+
+ print 4 - count
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int  x;
+int main ()
+{
+    set<int>s;
+    for(int i = 0; i <4; ++i){
+        scanf("%d" , &x);
+        s.insert(x);
+    }
+    printf("%d\n" , 4 - s.size());
+            return 0;
+}
+
+________________________________another solution_____________________________
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+     int ar[6],cnt = 1;
+    for(int i = 0; i < 4; i++){
+        scanf("%d" , &ar[i]);
+    }
+    sort(ar,ar+4);
+    for(int i = 0; i < 3; i++){
+        if(ar[i] != ar[i+1])cnt++;
+    }
+    printf("%d\n" ,4 - cnt);
+    return 0;
+}
+
+
+________________________________another solution_____________________________
+
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    vector<int> s(4);
+    scanf("%d%d%d%d" , &s[0] , &s[1] , &s[2] ,&s[3]);
+    sort(s.begin(), s.end());
+    s.erase(unique(s.begin(), s.end()), s.end());
+    printf("%d\n" ,4 - s.size());
+    return 0;
+}

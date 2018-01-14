@@ -1,0 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+long long   a , b;
+int main(){
+  scanf("%lld%lld" , &a , &b);
+  if( a % 2 != 0 ) ++a;
+  if(b - a < 2) puts("-1");
+   else printf("%lld %lld %lld\n" , a , a+1 , a+2);
+  return 0;
+  }

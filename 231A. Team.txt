@@ -1,0 +1,38 @@
+/*
+
+3 contester every one have a row that mean if he 
+will solve it == 1 else == 0
+ , if num of 1's > num of 0's it will solve 
+count++
+
+print count "num of problems 'll solve"
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int n  , x , y , z , counter;
+int main ()
+{
+    scanf("%d" , &n);
+    for(int i = 0; i < n; ++i){
+        scanf("%d%d%d" , &x ,&y , &z);
+        if((x == 1 && y == 1 ) || (x == 1 &&z == 1) || (y == 1 && z == 1))
+                    counter++;
+    }
+    printf("%d\n" , counter);
+            return 0;
+}
+_________________________________Another_Solution____________________________
+#include<bits/stdc++.h>
+using namespace std;
+int n  , x , y , z , counter;
+int main ()
+{
+    scanf("%d" , &n);
+    for(int i = 0; i < n; ++i){
+        scanf("%d%d%d" , &x ,&y , &z);
+         counter+=(x + y + z)/2;
+    }
+    printf("%d\n" , counter);
+            return 0;
+}

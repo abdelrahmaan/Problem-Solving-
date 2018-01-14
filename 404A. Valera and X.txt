@@ -1,0 +1,97 @@
+#include <bits/stdc++.h>
+using namespace std;
+int n;
+char  A[305][305] ,firstCh , secondCh;
+int main(){
+    scanf("%d" , &n);
+    for(int i =0; i< n; ++i)
+        for(int j =0; j< n; ++j)
+            cin >> A[i][j];
+            
+            firstCh = A[n/2][n/2];
+            secondCh = A[n]
+            
+
+        if(A[0][0] == A[0][n] && A[n][0] == A[n][n] && A[0][0] == A[n/2][n/2] && A[n][0] == A[n/2][n/2]){
+                firstCh = A[0][0];
+            for(int i =1; i< n-1; ++i)
+                for(int j =0; j< n; ++j)
+                if(A[i][j] != A[i][j+2]){
+                        puts("NO");
+                        return 0;
+                }else{
+                puts("YES");
+                return 0;
+                }
+
+        }
+        puts("NO");
+            return 0;
+}___________________________-
+#include <bits/stdc++.h>
+using namespace std;
+int n , o , k;
+char  A[305][305] ,firstCh , secondCh;
+set<char> stDialogLeft;
+set<char> stDialogRight;
+set<char> stOthers;
+
+int main(){
+    scanf("%d" , &n);
+    for(int i =0; i< n; ++i)
+        for(int j =0; j< n; ++j)
+            cin >> A[i][j];
+
+            for(int i =0; i < n; ++i){
+                for(int j =0; j < n; ++j){
+                    o = n-1-k;
+                    stDialogRight.insert((A[i][o]));
+                        if(i == j)
+                    stDialogRight.insert((A[i][j]));
+                    else
+                    stOthers.insert((A[i][j]));
+                }
+            ++k;
+            }
+                        if( stDialogRight.size() == 1 && stOthers.size() == 1)
+                            puts("YES");
+                        else
+                            puts("NO");
+            return 0;
+}
+
+
+_____________________________________________________
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    char matrix[300][300];
+
+    cin>>n;
+
+    for(int i = 0; i<n; i++)
+        for(int j=0; j<n; j++)
+            cin>>matrix[i][j];
+
+    for(int i=0; i<n; i++)
+    {
+        if((matrix[i][i]!=matrix[i][n-i-1])||((matrix[i][i]!=matrix[0][0])||(matrix[i][n-i-1]!=matrix[0][0])))
+        {
+            cout<<"NO";
+            return 0;
+        }
+        for(int j=0; j<n; j++)
+        {
+            if((j!=i)&&(j!=(n-i-1))&&((matrix[i][j]==matrix[0][0])||(matrix[i][j]!=matrix[0][1])))
+            {
+                cout<<"NO";
+                return 0;
+            }
+        }
+    }
+    cout<<"YES";
+    return 0;
+}

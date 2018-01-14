@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+string s;
+int len , counter;
+int main() {
+    cin >> s;
+    len = s.size();
+    for(int i = 0; i < len / 2; ++i)
+        if(s[i] != s[len-i-1]) counter++;
+        if((len %2 == 0 && counter ==1) || (len %2 !=0 && counter <= 1)) puts("YES");
+         else puts("NO");
+    return 0;
+}

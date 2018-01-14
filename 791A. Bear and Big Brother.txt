@@ -1,0 +1,22 @@
+/*
+
+Limak  weight is tripled .. a *=3
+Bob's weight is doubled .. b *=2
+how many years a > b 
+
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int a  , b , y;
+int main ()
+{
+    scanf("%d%d" , &a , &b );
+    while(a <= b ){
+            a *=3;
+            b *=2;
+            ++y;
+    }
+    printf("%d\n" , y);
+            return 0;
+}

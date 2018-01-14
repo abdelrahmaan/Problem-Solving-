@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+int n , A[10006] , B[10006];
+int main(){
+    scanf("%d"  ,&n);
+    for(int i = 0 ; i < n; ++i)
+        scanf("%d%d" , &A[i] , &B[i]);
+
+        for(int i = 0 ; i < n; ++i){
+            if(A[i] != B[i]){
+                printf("rated\n");
+                return 0;
+            }
+        }
+         for(int i = 0 ; i < n; ++i){
+                if( A[i] < A[i+1]){
+                printf("unrated\n");
+                return 0;
+            }
+         }
+                printf("maybe\n");
+    return 0;
+}

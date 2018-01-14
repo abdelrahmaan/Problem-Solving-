@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+int n , m;
+bool dots = 1;
+int main(){
+    cin>>n >> m  ;
+    for(int i = 1; i <= n/2; ++i)
+    {
+        for(int j = 1; j <= m; ++j) cout<<"#";
+        cout<<endl;
+        if(dots){
+        for(int j = 1; j <= m-1; ++j)   cout<<".";
+        cout<<"#"<<endl;
+        dots = 0;
+        }else{
+        cout<<"#";
+        for(int j = 1; j <= m-1; ++j)   cout<<".";
+        cout<<endl;
+        dots = 1;
+        }
+    }for(int j = 1; j <= m; ++j) cout<<"#";
+        cout<<endl;
+
+return 0;
+}

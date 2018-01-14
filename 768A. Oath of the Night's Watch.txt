@@ -1,0 +1,30 @@
+/*
+find number greter than the maximum and the minimum
+*/
+
+
+
+#include<bits/stdc++.h>
+  #define lld long long int
+  using namespace std;
+  int main()
+  {
+      lld n, count=0;
+      scanf("%lld", &n);
+      lld ara[n];
+      for(lld i=0; i<n; i++){
+          scanf("%lld", &ara[i]);
+      }
+      if(n < 3)
+          printf("0\n");
+      else{
+          sort(ara,ara+n);
+          for(lld i=1; i<n-1; i++){
+              if(ara[i] > ara[0]  &&  ara[i] < ara[n-1])
+                  count++;
+          }
+          printf("%lld\n", count);
+      }
+
+      return 0;
+  }

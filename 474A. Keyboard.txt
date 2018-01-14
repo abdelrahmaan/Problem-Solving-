@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+string  s , sNew ,s1 ="qwertyuiopasdfghjkl;zxcvbnm,./";
+char ch;
+int main(){
+    cin >> ch;
+    cin >> s;
+    for(int i = 0; i < s.length(); i++)
+            for(int j = 0; j < s1.length(); j++)
+            if(s[i] == s1[j])
+                if(ch == 'R')
+                    sNew += s1[j-1];
+                else
+                    sNew += s1[j+1];
+                cout << sNew << endl;
+    return 0;
+}

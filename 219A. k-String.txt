@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+int k , len , num;
+string s ;
+char c;
+int main() {
+    scanf("%d" , &k );
+    cin >> s;
+    len = s.size();
+
+    sort(s.begin(),s.end());
+
+    for(int i = 0; i< len; i++){
+	    if(i % k ==0) c = s[i];
+	    if(s[i]==c) num++;
+	}
+	if(len == num && num % k ==0){
+	    for(int i = 0; i < k; i++)
+	        for(int j = 0; j < s.size(); j+=k)
+	            cout<<s[j];
+	    }
+	    else puts("-1");
+    return 0;
+}

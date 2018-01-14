@@ -1,0 +1,23 @@
+/*
+
+make Array on n
+take an Array and each element conseder that index 
+of a making a new array and put in it 1 then 2 ,... n
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int num =0 , A[109] , gift = 0;
+    scanf("%d" , &num);
+    for(int i = 1; i<= num; ++i){
+      scanf("%d" , &gift);
+        A[gift]  = i;
+    }
+
+        for(int i = 1; i<= num; ++i)
+        printf("%d " , A[i]);
+        printf("\n");
+
+    return 0;
+}

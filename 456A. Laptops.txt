@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+int n ;
+int main(){
+    scanf("%d", &n);
+    pair<int,int> pr[n];
+    for(int i = 0; i< n; ++i)
+        scanf("%d%d", &pr[i].first , &pr[i].second);
+            sort(pr,pr+n);
+       for(int i = 0; i< n; ++i)
+       if(pr[i].first<pr[i+1].first && pr[i].second>pr[i+1].second)
+        {
+           printf("Happy Alex\n");
+            return 0;
+        }
+        printf("Poor Alex\n");
+            return 0;
+}

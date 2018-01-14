@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int arr[100];
+ 
+    int n;
+    cin>>n;
+ 
+    for(int i = 0; i < n; ++i)
+        cin>>arr[i];
+ 
+    bool valid = true;
+ 
+    //for each number, know how many times repeated
+    for(int i = 0; i < n; ++i)
+    {
+        int C = 0;
+        for(int j = 0; j < n; ++j)
+        {
+            if(arr[i] == arr[j])
+                ++C;
+        }
+ 
+        if(n < 2*C-1)
+        {
+            valid = false;
+            break;
+        }
+    }
+ 
+ 
+    if(valid)
+        cout<<"YES\n";
+    else
+        cout<<"NO\n";
+    return 0;
+}

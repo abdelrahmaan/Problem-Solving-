@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+const int N = 1e2+9 , OO = 1000000009;
+int n , i = 1;
+int main() {
+    scanf("%d" ,&n );
+     while(1){
+      n -= i;
+      ++i;
+      if(n == 0){
+      puts("YES");
+      return 0;
+     }else if (n < 0){
+     puts("NO");
+      return 0;
+        }
+     }
+}
+______________________________________________
+#include <bits/stdc++.h>
+using namespace std;
+const int N = 1e2+9 , OO = 1000000009;
+int n , i = 1 , x;
+int main() {
+    scanf("%d" ,&n );
+     while ( x < n){
+        x += i;
+        ++i;
+     }
+     cout << (x == n ? "YES" : "NO");
+      return 0;
+}

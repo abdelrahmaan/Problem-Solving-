@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+const int N = 1e2+9 , OO = 1000000009;
+int n , A[107]  , minii , miniIndex , maxiIndex;
+int main() {
+    scanf("%d" ,&n );
+    for(int i =0; i < n; ++i)
+        scanf("%d" , &A[i]);
+        miniIndex = min_element(A , A + n)- A;
+        maxiIndex = max_element(A , A + n)- A;
+        minii = *min_element(A , A + n);
+
+        for(int i =0; i < n; ++i)
+        if(A[i] == minii && i > miniIndex) miniIndex = i;
+
+    if(maxiIndex < miniIndex) printf("%d\n" , maxiIndex - 1 + n -miniIndex );
+    else printf("%d\n" , maxiIndex + (n - miniIndex) - 2);
+        return 0;
+}

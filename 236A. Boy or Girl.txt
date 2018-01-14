@@ -1,0 +1,25 @@
+/*
+delete chatacter at the same chatacter and 
+if size odd == female
+else == male
+
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+string s1;
+char c;
+set<char>st;
+int main ()
+{
+    cin >> s1;
+    for(int i = 0; i<s1.length(); ++i){
+            c = s1[i];
+        st.insert(c);
+    }
+        if(st.size() % 2 == 0)
+            printf("CHAT WITH HER!\n");
+            else
+            printf("IGNORE HIM!\n");
+            return 0;
+}
